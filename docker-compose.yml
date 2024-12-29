@@ -1,0 +1,25 @@
+version: '3'
+services:
+  commande_service:
+    build:
+      context: ./commande-service
+      dockerfile: Dockerfile
+    ports:
+      - "4001:4001"
+
+  produit_service:
+    build:
+      context: ./produit-service
+      dockerfile: Dockerfile
+    ports:
+      - "4000:4000"
+
+  auth_service:
+    build:
+      context: ./auth-service
+      dockerfile: Dockerfile
+    ports:
+      - "4002:4002"
+
+
+
